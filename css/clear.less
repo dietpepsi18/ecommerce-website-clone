@@ -1,0 +1,11 @@
+/* 这个CSS文件的作用是为了同时解决了垂直外边距重叠问题，以及高度塌陷问题 
+   只需要将相关父元素的class设置为clearfix （一般设置的都是父元素）*/
+
+// 定义一个函数clearfix()，引入到css文件中，就可以随时调用这个函数
+.clearfix(){
+    &::after{
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
